@@ -20,7 +20,7 @@ class Transfer
   end
   
   def execute_transaction 
-    if self.sender.balance < amount
+    if self.sender.balance < amount && @status = "pending"
       return nil 
       
     else 

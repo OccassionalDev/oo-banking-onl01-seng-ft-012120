@@ -21,7 +21,7 @@ class Transfer
   end
   
   def execute_transaction 
-    if @transfered_once == false && self.sender.balance < amount 
+    if @transfered_once != false && self.sender.balance < amount 
       return nil 
       
     else 

@@ -24,9 +24,6 @@ class Transfer
     return "Transaction rejected. Please check your account balance."
   end 
     
-    
-  
-  
   def execute_transaction 
     if valid? && self.sender.balance > @amount && @status == "pending"
       self.sender.balance -= @amount 
@@ -36,5 +33,10 @@ class Transfer
     else 
       reject_transfer 
     end 
+  end
+  
+  def reverse_transfer 
+    
+    
   end 
 end

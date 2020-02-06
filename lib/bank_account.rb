@@ -1,3 +1,3 @@
 class BankAccount
-  attr
+  attr_accessor :
 end

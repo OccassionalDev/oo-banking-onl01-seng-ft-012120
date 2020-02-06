@@ -17,5 +17,15 @@ class Transfer
     else 
       return false
     end 
+  end
+  
+  def execute_transaction 
+    if self.sender.balance < amount
+      return nil 
+      
+    else 
+      self.sender.balance -= amount 
+      self.receiver.balance += amount 
+    end 
   end 
 end

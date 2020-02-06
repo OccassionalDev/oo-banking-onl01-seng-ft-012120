@@ -19,6 +19,13 @@ class Transfer
     end 
   end
   
+  def reject_transfer
+    @status = "ca"
+    return "Transaction rejected. Please check your account balance."
+    
+    
+  
+  
   def execute_transaction 
     if self.sender.balance < self.amount
       return "Transaction rejected. Please check your account balance."

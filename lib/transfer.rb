@@ -32,6 +32,9 @@ class Transfer
       self.sender.balance -= @amount 
       self.receiver.balance += @amount 
       @status = "complete"
+      
+    else 
+      reject_transfer 
     end 
   end 
 end
